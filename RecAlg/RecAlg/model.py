@@ -1,9 +1,3 @@
-'''
-Created on March 24, 2020
-
-@author: Tinglin Huang (huangtinglin@outlook.com)
-'''
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
