@@ -8,6 +8,7 @@ import numpy as np
 import scipy.sparse as sp
 
 class GCMC(nn.Module):
+    """Berg, R. V. D., Kipf, T. N., & Welling, M. (2017). Graph convolutional matrix completion. arXiv preprint arXiv:1706.02263."""
     def __init__(self, n_user, n_item, norm_adj, args):
         super(GCMC, self).__init__()
         self.n_user = n_user
@@ -253,6 +254,7 @@ class SCF(nn.Module):
         return u_g_embeddings, pos_i_g_embeddings, neg_i_g_embeddings
 
 class NGCF(nn.Module):
+    """Wang, X., He, X., Wang, M., Feng, F., & Chua, T. S. (2019, July). Neural graph collaborative filtering. In Proceedings of the 42nd international ACM SIGIR conference on Research and development in Information Retrieval (pp. 165-174)."""
     def __init__(self, n_user, n_item, norm_adj, args):
         super(NGCF, self).__init__()
         self.n_user = n_user
@@ -396,6 +398,7 @@ class NGCF(nn.Module):
 
 
 class LRGCCF(nn.Module):
+    """Chen, L., Wu, L., Hong, R., Zhang, K., & Wang, M. (2020, April). Revisiting graph based collaborative filtering: A linear residual graph convolutional network approach. In Proceedings of the AAAI conference on artificial intelligence (Vol. 34, No. 01, pp. 27-34)."""
     def __init__(self, n_user, n_item, norm_adj, args):
         super(LRGCCF, self).__init__()
         self.n_user = n_user
@@ -522,6 +525,7 @@ class LRGCCF(nn.Module):
 
 
 class LightGCN(nn.Module):
+    """He, X., Deng, K., Wang, X., Li, Y., Zhang, Y., & Wang, M. (2020, July). Lightgcn: Simplifying and powering graph convolution network for recommendation. In Proceedings of the 43rd International ACM SIGIR conference on research and development in Information Retrieval (pp. 639-648)."""
     def __init__(self, n_user, n_item, norm_adj, args):
         super(LightGCN, self).__init__()
         self.n_user = n_user
@@ -631,6 +635,7 @@ class LightGCN(nn.Module):
         return u_g_embeddings, pos_i_g_embeddings, neg_i_g_embeddings
 
 class BPR(nn.Module):
+    """Rendle, S., Freudenthaler, C., Gantner, Z., & Schmidt-Thieme, L. (2009, June). BPR: Bayesian personalized ranking from implicit feedback. In Proceedings of the Twenty-Fifth Conference on Uncertainty in Artificial Intelligence (pp. 452-461)."""
     def __init__(self, n_user, n_item, args):
         super(BPR, self).__init__()
         self.n_user = n_user
